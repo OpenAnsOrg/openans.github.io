@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>openAns</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kelly+Slab&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css"
+      integrity="sha512-4rPgyv5iG0PZw8E+oRdfN/Gq+yilzt9rQ8Yci2jJ15rAyBmF0HBE4wFjBkoB72cxBeg63uobaj1UcNt/scV93w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        height: 100vh;
+        width: calc(100vw - 40px);
+      }
+      body {
+        background-color: black;
+        background-position: fixed;
+        background-size: cover;
+      }
+      header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: calc(100vw - 40px);
+        color: whitesmoke;
+        height: fit-content;
+        background: black;
+        z-index: 10;
+      }
+      .logo {
+        display: flex;
+        font-family: "Kelly Slab", cursive;
+        justify-content: center;
+        align-items: center;
+        font-size: xx-large;
+      }
+      .logoImg {
+        margin: 0px 10px;
+      }
+      .git {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: x-large;
+        font-family: "Fira Sans Extra Condensed", sans-serif;
+      }
+      .gitImg {
+        margin: 0px 10px;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0 5px;
+      }
+      #fullpage {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+      }
+      .section {
+        width: 70%;
+        color: whitesmoke;
+        font-family: "Fira Sans", sans-serif;
+        font-size: 70px;
+      }
+      .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .heroTxt{
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <div class="logoImg">
+          <img src="OpenAnsLogo.svg" alt="openAns Logo" />
+        </div>
+        <div class="logoTxt">openAns</div>
+      </div>
+      <div class="git">
+        <div class="gitTxt">GitHub</div>
+        <div class="gitImg">
+          <img src="github.png" alt="git image" height="48px" width="48px" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="fullpage">
+        <div class="section">
+          <div class="hero">
+            <div class="heroTxt">
+              <div id="typed-strings">
+                <p>Want formula?</p>
+                <p>Calculate answers?</p>
+                <p>Use <strong>openAns.</strong></p>
+              </div>
+
+              <span id="typed"></span>
+            </div>
+            <lottie-player
+              src="./heroLottie.json"
+              background="transparent"
+              speed="1"
+              style="width: 300px; height: 300px"
+              autoplay
+              loop
+            ></lottie-player>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"
+      integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      new fullpage("#fullpage", {
+        //options here
+        autoScrolling: true,
+        scrollHorizontally: true,
+      });
+      var typed = new Typed("#typed", {
+        stringsElement: "#typed-strings",
+      });
+    </script>
+  </body>
+</html>
